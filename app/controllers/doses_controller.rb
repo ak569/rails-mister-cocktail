@@ -26,7 +26,6 @@ class DosesController < ApplicationController
   end
   end
 
-
   private
 
   def dose_params
