@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'open-uri'
-require 'JSON'
+require 'json'
 puts 'Cleaning database...'
 Dose.destroy_all
 Cocktail.destroy_all
