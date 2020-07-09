@@ -27,6 +27,8 @@ puts 'Creating 10 cocktails...'
   cocktail = Cocktail.new(
     name: Faker::Coffee.blend_name
   )
+  file = URI.open("https://source.unsplash.com/featured/?cocktail&#{rand(10000)}")
+  cocktail.photo.attach(io: file, filename: "#{cocktail.name}.png", content_type: 'image/png')
   cocktail.save
   ingredients = Ingredient.all.sample(3)
   ingredients.each do |ingredient|
